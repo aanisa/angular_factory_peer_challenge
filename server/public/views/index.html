@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chi MEAN</title>
+
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/client.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Favorite Movies</h1>
+
+
+    <div ng-controller="InputController">
+      <form >
+        <input type="text" ng-model="Moviesobj.title" placeholder="Title">
+        <input type="text" ng-model="Moviesobj.description" placeholder="Description">
+        <input type="text" ng-model="Moviesobj.director" placeholder="Director">
+        <input type="number" ng-model="Moviesobj.duration" placeholder="Duration">
+        <button type="button" ng-click="storeMoviefunc(Moviesobj)">Add Movie</button>
+
+      </form>
+
+    </div>
+
+    <br>
+
+    <div ng-controller="OutputController">
+
+        <div class="row">
+            <div class="col-md-12" ng-repeat="movie in movieArray">
+            <p>{{movie.title}}</p>
+            <p>{{movie.description}}</p>
+            <p>{{movie.director}}</p>
+            <p>{{movie.duration}}</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
