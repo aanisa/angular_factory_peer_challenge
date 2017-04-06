@@ -3,24 +3,35 @@ h1{
   color: white;
   font-size: 50px;
 }
-form{
-  text-align: center;
-  padding: 20px;
-}
+
 .col-md-12 {
-  background-color: slategrey;
-  text-align: center;
+background-color: slategray;
 }
 
-.col-md-3 {
+.formPart{
   text-align: center;
+  margin-top: 10px;
+  padding: 5px;
+}
+/*.formContainer{
+  height: 200px;
+}*/
+
+.col-md-4 {
+  background-color: lightgrey;
+}
+
+.movieInfo {
   font-size: 20px;
 }
 
 .headings {
-  text-align: center;
   font-weight: bold;
   font-size: 28px;
-  background-color: lightgray;
   color: #636667;
+  background-color: aliceblue;
+}
+
+.btn {
+  background-color: white;
 }
