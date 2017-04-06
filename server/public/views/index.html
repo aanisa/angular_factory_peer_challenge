@@ -13,35 +13,49 @@
 </head>
 
 <body>
+  <div class="row">
+    <div class="col-md-12">
+        <h1>Favorite Movies</h1>
+    </div>
+  </div>
 
-    <h1>Favorite Movies</h1>
 
-
-    <div ng-controller="InputController">
-      <form >
-        <input type="text" ng-model="Moviesobj.title" placeholder="Title">
-        <input type="text" ng-model="Moviesobj.description" placeholder="Description">
-        <input type="text" ng-model="Moviesobj.director" placeholder="Director">
-        <input type="number" ng-model="Moviesobj.duration" placeholder="Duration">
-        <button type="button" ng-click="storeMoviefunc(Moviesobj)">Add Movie</button>
-
-      </form>
-
+    <div class="row" ng-controller="InputController">
+        <div class="col-md-12">
+            <form>
+                <input type="text" ng-model="Moviesobj.title" placeholder="Title">
+                <input type="text" ng-model="Moviesobj.description" placeholder="Description">
+                <input type="text" ng-model="Moviesobj.director" placeholder="Director">
+                <input type="number" ng-model="Moviesobj.duration" placeholder="Duration">
+                <button type="submit" ng-click="storeMoviefunc(Moviesobj)">Add Movie</button>
+            </form>
+        </div>
     </div>
 
-    <br>
 
-    <div ng-controller="OutputController">
+  <div class="row">
+    <div class="col-md-3 headings">Title</div>
+    <div class="col-md-3 headings">Description</div>
+    <div class="col-md-3 headings">Director</div>
+    <div class="col-md-3 headings">Duration</div>
+  </div>
 
-        <div class="row">
-            <div class="col-md-12" ng-repeat="movie in movieArray">
-            <p>{{movie.title}}</p>
-            <p>{{movie.description}}</p>
-            <p>{{movie.director}}</p>
-            <p>{{movie.duration}}</p>
+
+    <div class="row" ng-controller="OutputController">
+        <div class="movieInfo" ng-repeat="movie in movieArray">
+            <div class="col-md-3">
+                {{movie.title}}
+            </div>
+            <div class="col-md-3">
+                {{movie.description}}
+            </div>
+            <div class="col-md-3">
+                {{movie.director}}
+            </div>
+            <div class="col-md-3">
+                {{movie.duration}}
             </div>
         </div>
-
     </div>
 
 </body>

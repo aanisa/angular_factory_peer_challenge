@@ -5,7 +5,6 @@ $scope.Moviesobj = MovieService.movie;
 $scope.storeMoviefunc = MovieService.storeMovie;
 
 
-
 }]);
 
 myApp.controller('OutputController', ['$scope', 'MovieService' , function($scope, MovieService){
@@ -31,6 +30,14 @@ function storeMovie(aMovie) {
   var movieCopy = angular.copy(aMovie);
   movieArray.push(movieCopy);
   console.log(movieArray);
+  clearInput(aMovie);
+}
+
+function clearInput(movie) {
+  movie.title = ('');
+  movie.description = ('');
+  movie.director = ('');
+  movie.duration = ('');
 }
 
   return {
