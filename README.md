@@ -23,3 +23,4 @@ Style the whole experience with Bootstrap!
 
 ## Pro Mode
 Have a break down the middle for the two views. So rather than have the experience stacked top and bottom, have them side by side.
+
